@@ -13,14 +13,21 @@ protocol BankingServiceDelegate: AnyObject {
 
 protocol AccountServices {
     func performOperation(operation: BankOperation, amount: Double) -> Bool
-    func requestLoan(amount: Double)
+}
+
+protocol InterestingRate {
     func calculateInterestRate()
+}
+
+protocol LoanableAccount {
+    func requestLoan(request: Double)
 }
 
 class BankAccount: AccountServices {
     
     var balance: Double = 0.0
     var accountNumber: String
+    var isFrozen: Bool = false
 
     var notificationService = NotificationService()
     var transactionsHistoryService = TransactionHistoryService()
@@ -30,15 +37,10 @@ class BankAccount: AccountServices {
     }
     
     func performOperation(operation: BankOperation, amount: Double) -> Bool {
+        guard !isFrozen else {
+            notificationService.sendNotification(message: "Operação falhou, a conta está congelada.")
+            return false
+        }
         return operation.execute(in: self, amount: amount)
     }
-    
-    func requestLoan(amount: Double) {
-        // Pedir um empréstimo
-    }
-    
-    func calculateInterestRate() {
-        // Calcular taxa de juros
-    }
-    
 }

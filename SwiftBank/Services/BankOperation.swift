@@ -23,7 +23,7 @@ class WithdrawViewOperation: BankOperation {
     }
 }
 
-class DepositOperation: BankOperation {
+class DepositViewOperation: BankOperation {
     func execute(in account: BankAccount, amount: Double) -> Bool {
         account.balance += amount
         account.notificationService.sendNotification(message: "Depósito no valor de \(amount.formatCurrency()) realizado!")

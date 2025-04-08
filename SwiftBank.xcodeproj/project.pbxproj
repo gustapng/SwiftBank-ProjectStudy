@@ -24,6 +24,8 @@
 		48F0A5ED2B89824F000AD05E /* SBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0A5EC2B89824F000AD05E /* SBTextField.swift */; };
 		48F0A5EF2B898269000AD05E /* SBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0A5EE2B898269000AD05E /* SBButton.swift */; };
 		48F0A5F12B8983C3000AD05E /* SBTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0A5F02B8983C3000AD05E /* SBTitleLabel.swift */; };
+		EC12973F2DA5DF410073A80A /* FrozenAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC12973E2DA5DF410073A80A /* FrozenAccount.swift */; };
+		EC1297412DA5E4AD0073A80A /* CheckingAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1297402DA5E4AD0073A80A /* CheckingAccount.swift */; };
 		ECDBFB172DA49D110063082D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBFB162DA49D110063082D /* NotificationService.swift */; };
 		ECDBFB192DA49D3A0063082D /* TransactionHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBFB182DA49D3A0063082D /* TransactionHistoryService.swift */; };
 		ECDBFB1B2DA4A7D20063082D /* BankOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBFB1A2DA4A7D20063082D /* BankOperation.swift */; };
@@ -49,6 +51,8 @@
 		48F0A5EC2B89824F000AD05E /* SBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTextField.swift; sourceTree = "<group>"; };
 		48F0A5EE2B898269000AD05E /* SBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBButton.swift; sourceTree = "<group>"; };
 		48F0A5F02B8983C3000AD05E /* SBTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTitleLabel.swift; sourceTree = "<group>"; };
+		EC12973E2DA5DF410073A80A /* FrozenAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrozenAccount.swift; sourceTree = "<group>"; };
+		EC1297402DA5E4AD0073A80A /* CheckingAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingAccount.swift; sourceTree = "<group>"; };
 		ECDBFB162DA49D110063082D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		ECDBFB182DA49D3A0063082D /* TransactionHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryService.swift; sourceTree = "<group>"; };
 		ECDBFB1A2DA4A7D20063082D /* BankOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankOperation.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		48D023972BA3F7170008B0BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EC12973D2DA5DF350073A80A /* Accounts */,
 				48D023982BA3F7CC0008B0BE /* BankAccount.swift */,
 				ECDBFB162DA49D110063082D /* NotificationService.swift */,
 				ECDBFB182DA49D3A0063082D /* TransactionHistoryService.swift */,
@@ -149,6 +154,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		EC12973D2DA5DF350073A80A /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				EC12973E2DA5DF410073A80A /* FrozenAccount.swift */,
+				EC1297402DA5E4AD0073A80A /* CheckingAccount.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48F0A5F12B8983C3000AD05E /* SBTitleLabel.swift in Sources */,
+				EC1297412DA5E4AD0073A80A /* CheckingAccount.swift in Sources */,
 				48F0A5CC2B8950C0000AD05E /* HomeViewController.swift in Sources */,
 				48BD84D42B8E71E4007F2460 /* Color+.swift in Sources */,
 				48F0A5E82B897CB7000AD05E /* UIViewController+.swift in Sources */,
@@ -229,6 +244,7 @@
 				48F0A5CA2B8950C0000AD05E /* SceneDelegate.swift in Sources */,
 				48D023992BA3F7CC0008B0BE /* BankAccount.swift in Sources */,
 				48F0A5E62B895788000AD05E /* OperationView.swift in Sources */,
+				EC12973F2DA5DF410073A80A /* FrozenAccount.swift in Sources */,
 				48F0A5E02B89520F000AD05E /* WithdrawViewController.swift in Sources */,
 				48F0A5DE2B8951CD000AD05E /* DepositViewController.swift in Sources */,
 				48D8316F2B8E20480061D339 /* Date+.swift in Sources */,
