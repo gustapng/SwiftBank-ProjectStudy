@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum BankOperation {
-    case withdraw, deposit
-}
-
 protocol BankingServiceDelegate: AnyObject {
     func didPerformOperation()
 }
@@ -25,33 +21,16 @@ class BankAccount: AccountServices {
     
     var balance: Double = 0.0
     var accountNumber: String
-    var transactionsHistory: [String] = []
+
+    var notificationService = NotificationService()
+    var transactionsHistoryService = TransactionHistoryService()
     
     init(accountNumber: String) {
         self.accountNumber = accountNumber
     }
     
     func performOperation(operation: BankOperation, amount: Double) -> Bool {
-        switch operation {
-        case .withdraw:
-            if amount <= balance {
-                balance -= amount
-                sendNotification(message: "Saque no valor de \(amount.formatCurrency()) realizado!")
-                transactionsHistory.insert("Saque no valor de \(amount.formatCurrency())", at: 0)
-                return true
-            }
-            return false
-        case .deposit:
-            balance += amount
-            sendNotification(message: "Depósito no valor de \(amount.formatCurrency()) realizado!")
-            transactionsHistory.insert("Depósito no valor de \(amount.formatCurrency())", at: 0)
-            return true
-        }
-    }
-    
-    func sendNotification(message: String) {
-        // Enviar notificação para o usuário
-        print(message)
+        return operation.execute(in: self, amount: amount)
     }
     
     func requestLoan(amount: Double) {

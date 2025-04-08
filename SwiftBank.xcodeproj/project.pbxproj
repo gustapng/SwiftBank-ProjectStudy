@@ -24,6 +24,9 @@
 		48F0A5ED2B89824F000AD05E /* SBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0A5EC2B89824F000AD05E /* SBTextField.swift */; };
 		48F0A5EF2B898269000AD05E /* SBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0A5EE2B898269000AD05E /* SBButton.swift */; };
 		48F0A5F12B8983C3000AD05E /* SBTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0A5F02B8983C3000AD05E /* SBTitleLabel.swift */; };
+		ECDBFB172DA49D110063082D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBFB162DA49D110063082D /* NotificationService.swift */; };
+		ECDBFB192DA49D3A0063082D /* TransactionHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBFB182DA49D3A0063082D /* TransactionHistoryService.swift */; };
+		ECDBFB1B2DA4A7D20063082D /* BankOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDBFB1A2DA4A7D20063082D /* BankOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		48F0A5EC2B89824F000AD05E /* SBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTextField.swift; sourceTree = "<group>"; };
 		48F0A5EE2B898269000AD05E /* SBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBButton.swift; sourceTree = "<group>"; };
 		48F0A5F02B8983C3000AD05E /* SBTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTitleLabel.swift; sourceTree = "<group>"; };
+		ECDBFB162DA49D110063082D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		ECDBFB182DA49D3A0063082D /* TransactionHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryService.swift; sourceTree = "<group>"; };
+		ECDBFB1A2DA4A7D20063082D /* BankOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				48D023982BA3F7CC0008B0BE /* BankAccount.swift */,
+				ECDBFB162DA49D110063082D /* NotificationService.swift */,
+				ECDBFB182DA49D3A0063082D /* TransactionHistoryService.swift */,
+				ECDBFB1A2DA4A7D20063082D /* BankOperation.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -216,12 +225,15 @@
 				48F0A5E82B897CB7000AD05E /* UIViewController+.swift in Sources */,
 				48F0A5EF2B898269000AD05E /* SBButton.swift in Sources */,
 				48F0A5C82B8950C0000AD05E /* AppDelegate.swift in Sources */,
+				ECDBFB192DA49D3A0063082D /* TransactionHistoryService.swift in Sources */,
 				48F0A5CA2B8950C0000AD05E /* SceneDelegate.swift in Sources */,
 				48D023992BA3F7CC0008B0BE /* BankAccount.swift in Sources */,
 				48F0A5E62B895788000AD05E /* OperationView.swift in Sources */,
 				48F0A5E02B89520F000AD05E /* WithdrawViewController.swift in Sources */,
 				48F0A5DE2B8951CD000AD05E /* DepositViewController.swift in Sources */,
 				48D8316F2B8E20480061D339 /* Date+.swift in Sources */,
+				ECDBFB1B2DA4A7D20063082D /* BankOperation.swift in Sources */,
+				ECDBFB172DA49D110063082D /* NotificationService.swift in Sources */,
 				48F0A5ED2B89824F000AD05E /* SBTextField.swift in Sources */,
 				48BD84D22B8E6E7F007F2460 /* Double+.swift in Sources */,
 				48F0A5EA2B898085000AD05E /* UITextField+.swift in Sources */,
@@ -368,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VMTKGDC5W;
+				DEVELOPMENT_TEAM = HG57HQBN7Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -380,7 +392,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giovannamoeller.SwiftBank;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -395,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4VMTKGDC5W;
+				DEVELOPMENT_TEAM = HG57HQBN7Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -407,7 +419,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giovannamoeller.SwiftBank;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
